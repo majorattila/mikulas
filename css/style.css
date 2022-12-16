@@ -1,0 +1,51 @@
+body{
+    background-image: url(../kepek/hatter.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#wrapper{
+    width: 65%;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "aside article"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    background-image: url(../kepek/fejlec.jpg);
+    background-size: cover;
+    height: 540px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside;
+}
+
+aside img {
+    width: 100%;
+}
+
+#szovegben {
+    float: right;
+    margin-left: 10px;
+}
+
+article {
+    grid-area: article;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
