@@ -9,7 +9,7 @@ body{
     margin: 0 auto;
     background-color: antiquewhite;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: 
         "header header"
         "nav nav"
@@ -22,10 +22,23 @@ header {
     background-image: url(../kepek/fejlec.jpg);
     background-size: cover;
     height: 540px;
+    padding-top: 35px;
+}
+
+header h1 {
+    text-align: center;
+    color: red;
+    font-family: cursive;
 }
 
 nav {
     grid-area: nav;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav hr{
+    color: white;
 }
 
 aside {
@@ -39,6 +52,7 @@ aside img {
 #szovegben {
     float: right;
     margin-left: 10px;
+    max-width: 40%;
 }
 
 article {
@@ -48,4 +62,43 @@ article {
 
 footer {
     grid-area: footer;
+    text-align: center;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    color: white;
+}
+
+footer, nav{
+    background-color: red;
+}
+
+@media all and (max-width: 600px){
+    #wrapper{
+        width: 95%;
+        margin: 0 auto;
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "article"
+            "footer";
+    }
+    aside{
+        display: none;
+    }
 }
